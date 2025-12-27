@@ -8,99 +8,217 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
   <style>
+    :root{
+      --bg: #ffffff;
+      --text: #111;
+      --muted: #5b6776;
+      --soft: #f5f7fa;
+      --border: #e5e7eb;
+
+      /* PREMIUM ACCENT (Gold). Change to #1e90ff for blue if you want. */
+      --accent: #d4af37;
+      --accentText: #111;
+    }
+
     body {
       margin: 0;
       font-family: Inter, sans-serif;
-      background: #ffffff;
-      color: #111;
+      background: var(--bg);
+      color: var(--text);
       line-height: 1.6;
     }
 
     header {
-      padding: 100px 20px;
+      padding: 92px 20px;
       text-align: center;
-      background: #f5f7fa;
+      background: var(--soft);
+      border-bottom: 1px solid var(--border);
     }
 
     h1, h2, h3 {
       font-family: Montserrat, sans-serif;
+      margin: 0;
     }
 
     h1 {
       font-size: 3rem;
       margin-bottom: 10px;
+      letter-spacing: .2px;
+    }
+
+    .tagline {
+      font-weight: 500;
+      margin: 6px 0 0;
+      color: var(--text);
+    }
+
+    .subline {
+      max-width: 760px;
+      margin: 16px auto 0;
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+
+    .micro {
+      margin-top: 14px;
+      font-size: .95rem;
+      color: var(--muted);
     }
 
     section {
-      padding: 70px 20px;
+      padding: 68px 20px;
       max-width: 1100px;
       margin: auto;
     }
 
+    .ctaRow {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 26px;
+    }
+
     .btn {
       display: inline-block;
-      margin: 10px;
-      padding: 14px 30px;
-      border-radius: 30px;
-      background: #1e90ff;
-      color: white;
+      padding: 14px 26px;
+      border-radius: 999px;
       text-decoration: none;
-      font-weight: 500;
+      font-weight: 600;
+      border: 1px solid transparent;
+    }
+
+    .btnPrimary {
+      background: var(--accent);
+      color: var(--accentText);
+      box-shadow: 0 8px 24px rgba(0,0,0,.08);
+    }
+
+    .btnOutline {
+      background: transparent;
+      border-color: var(--accent);
+      color: var(--text);
+    }
+
+    .btnSoft {
+      background: #fff;
+      border-color: var(--border);
+      color: var(--text);
     }
 
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 30px;
-      margin-top: 40px;
+      gap: 22px;
+      margin-top: 28px;
     }
 
     .card {
-      border: 1px solid #e5e5e5;
-      padding: 30px;
-      border-radius: 14px;
+      border: 1px solid var(--border);
+      padding: 26px;
+      border-radius: 16px;
+      background: #fff;
+    }
+
+    .card h3 { margin-bottom: 10px; }
+    .card p { margin: 0; color: var(--muted); }
+
+    .pillRow{
+      display:flex;
+      gap:10px;
+      justify-content:center;
+      flex-wrap:wrap;
+      margin-top: 18px;
+    }
+
+    .pill{
+      border: 1px solid var(--border);
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-size: .92rem;
+      color: var(--muted);
       background: #fff;
     }
 
     ul {
       list-style: none;
       padding: 0;
+      margin: 18px 0 0;
     }
 
     ul li {
-      margin-bottom: 12px;
+      margin-bottom: 10px;
+      color: var(--muted);
+    }
+
+    .twoCol{
+      display:grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 26px;
+      margin-top: 18px;
+    }
+    @media (max-width: 820px){
+      .twoCol{ grid-template-columns: 1fr; }
+    }
+
+    .box {
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 22px;
+      background: #fff;
     }
 
     form {
-      max-width: 600px;
-      margin-top: 30px;
+      margin-top: 14px;
+    }
+
+    label {
+      display:block;
+      font-size:.95rem;
+      color: var(--muted);
+      margin: 10px 0 6px;
     }
 
     input, textarea {
       width: 100%;
-      padding: 14px;
-      margin-bottom: 12px;
-      border-radius: 8px;
-      border: 1px solid #ccc;
+      padding: 13px 14px;
+      border-radius: 10px;
+      border: 1px solid #cfd6df;
       font-size: 1rem;
+      outline: none;
+    }
+
+    textarea {
+      min-height: 120px;
     }
 
     button {
-      padding: 14px 30px;
-      border-radius: 30px;
+      margin-top: 12px;
+      padding: 14px 22px;
+      border-radius: 999px;
       border: none;
-      background: #1e90ff;
-      color: white;
+      background: var(--accent);
+      color: var(--accentText);
       font-size: 1rem;
+      font-weight: 700;
       cursor: pointer;
+      width: 100%;
     }
 
     footer {
       text-align: center;
-      padding: 40px;
-      font-size: 0.9rem;
-      background: #f5f7fa;
-      margin-top: 80px;
+      padding: 36px 18px;
+      font-size: 0.92rem;
+      background: var(--soft);
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      margin-top: 60px;
+    }
+
+    .smallLink {
+      color: var(--text);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(0,0,0,.15);
     }
   </style>
 </head>
@@ -109,12 +227,32 @@
 
 <header>
   <h1>Love Action Entertainment</h1>
-  <p>DJs • Live Events • Cultural Experiences</p>
-  <p>Professional DJ services and curated event experiences for venues, brands, and community spaces.</p>
-  <a href="#contact" class="btn">Book an Event</a>
+  <p class="tagline">DJs • Live Events • Cultural Experiences</p>
+  <p class="subline">
+    Professional DJ services and curated event experiences for venues, brands, and community spaces.
+  </p>
+
+  <p class="micro">
+    Serving Georgia + multi-market activations • Brand-safe • Family-friendly options available
+  </p>
+
+  <div class="ctaRow">
+    <a href="#contact" class="btn btnPrimary">Book an Event</a>
+    <a href="#services" class="btn btnOutline">Our Services</a>
+    <!-- Replace this link with your Google Form link -->
+    <a href="https://forms.gle/PASTE-YOUR-GOOGLE-FORM-LINK-HERE" class="btn btnSoft" target="_blank" rel="noopener">Quick Booking Form</a>
+  </div>
+
+  <div class="pillRow">
+    <span class="pill">Retail & Malls</span>
+    <span class="pill">Family Venues</span>
+    <span class="pill">Corporate</span>
+    <span class="pill">Nightlife</span>
+    <span class="pill">Tournaments</span>
+  </div>
 </header>
 
-<section>
+<section id="services">
   <h2>What We Do</h2>
 
   <div class="grid">
@@ -137,40 +275,80 @@
 
 <section>
   <h2>About LAE</h2>
-  <p>
-    Love Action Entertainment (LAE) is an event and entertainment company delivering
-    professional DJ services and curated live experiences for venues, brands, and communities.
-  </p>
+  <div class="box">
+    <p style="margin:0;color:var(--muted);">
+      Love Action Entertainment (LAE) is an event and entertainment company delivering professional DJ services
+      and curated live experiences for venues, brands, and communities. LAE focuses on consistency, professionalism,
+      and culturally aware programming that connects with diverse audiences.
+    </p>
+  </div>
 </section>
 
 <section>
   <h2>Why Love Action Entertainment</h2>
   <ul>
-    <li>Professional, experienced DJs</li>
-    <li>Brand-safe and family-friendly options</li>
-    <li>Reliable setup and execution</li>
-    <li>Scalable across multiple locations</li>
-    <li>Culture-forward programming</li>
+    <li>• Professional, experienced DJs</li>
+    <li>• Brand-safe and family-friendly options</li>
+    <li>• Reliable setup and execution</li>
+    <li>• Scalable across multiple locations</li>
+    <li>• Culture-forward programming</li>
   </ul>
 </section>
 
 <section id="contact">
   <h2>Book or Contact LAE</h2>
 
-  <form action="mailto:loveactionentertainment@gmail.com" method="post" enctype="text/plain">
-    <input type="text" name="Name" placeholder="Name" required>
-    <input type="text" name="Company" placeholder="Company / Venue">
-    <input type="email" name="Email" placeholder="Email" required>
-    <input type="text" name="Event" placeholder="Event Type">
-    <input type="date" name="Date">
-    <textarea name="Message" placeholder="Tell us about your event"></textarea>
-    <button type="submit">Send Inquiry</button>
-  </form>
+  <div class="twoCol">
+    <div class="box">
+      <h3 style="margin-bottom:10px;">Fastest booking</h3>
+      <p style="margin:0;color:var(--muted);">
+        Use our quick form for the fastest turnaround.
+      </p>
+      <div class="ctaRow" style="justify-content:flex-start;margin-top:16px;">
+        <!-- Replace this link with your Google Form link -->
+        <a href="https://forms.gle/PASTE-YOUR-GOOGLE-FORM-LINK-HERE" class="btn btnPrimary" target="_blank" rel="noopener">Open Quick Booking Form</a>
+      </div>
+
+      <p class="micro" style="margin-top:18px;">
+        Or email us directly: <a class="smallLink" href="mailto:loveactionentertainment@gmail.com">loveactionentertainment@gmail.com</a>
+      </p>
+    </div>
+
+    <div class="box">
+      <h3 style="margin-bottom:10px;">Email inquiry (backup)</h3>
+      <p style="margin:0;color:var(--muted);">
+        If you prefer email, this sends details straight to your inbox.
+      </p>
+
+      <form action="mailto:loveactionentertainment@gmail.com" method="post" enctype="text/plain">
+        <label>Name</label>
+        <input type="text" name="Name" placeholder="Name" required>
+
+        <label>Company / Venue</label>
+        <input type="text" name="Company" placeholder="Company / Venue">
+
+        <label>Email</label>
+        <input type="email" name="Email" placeholder="Email" required>
+
+        <label>Event Type</label>
+        <input type="text" name="Event" placeholder="Event Type">
+
+        <label>Event Date</label>
+        <input type="date" name="Date">
+
+        <label>Message</label>
+        <textarea name="Message" placeholder="Tell us about your event (location, time, crowd size, any special needs)"></textarea>
+
+        <button type="submit">Send Inquiry</button>
+      </form>
+    </div>
+  </div>
 </section>
 
 <footer>
-  © Love Action Entertainment
+  © Love Action Entertainment • <a class="smallLink" href="#contact">Book</a> • <a class="smallLink" href="#services">Services</a>
 </footer>
 
 </body>
 </html>
+
