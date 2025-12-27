@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Love Action Entertainment</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Inter, sans-serif;
+      background: #ffffff;
+      color: #111;
+      line-height: 1.6;
+    }
+
+    header {
+      padding: 100px 20px;
+      text-align: center;
+      background: #f5f7fa;
+    }
+
+    h1, h2, h3 {
+      font-family: Montserrat, sans-serif;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    section {
+      padding: 70px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .btn {
+      display: inline-block;
+      margin: 10px;
+      padding: 14px 30px;
+      border-radius: 30px;
+      background: #1e90ff;
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .card {
+      border: 1px solid #e5e5e5;
+      padding: 30px;
+      border-radius: 14px;
+      background: #fff;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    ul li {
+      margin-bottom: 12px;
+    }
+
+    form {
+      max-width: 600px;
+      margin-top: 30px;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 14px;
+      margin-bottom: 12px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+
+    button {
+      padding: 14px 30px;
+      border-radius: 30px;
+      border: none;
+      background: #1e90ff;
+      color: white;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px;
+      font-size: 0.9rem;
+      background: #f5f7fa;
+      margin-top: 80px;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>Love Action Entertainment</h1>
+  <p>DJs • Live Events • Cultural Experiences</p>
+  <p>Professional DJ services and curated event experiences for venues, brands, and community spaces.</p>
+  <a href="#contact" class="btn">Book an Event</a>
+</header>
+
+<section>
+  <h2>What We Do</h2>
+
+  <div class="grid">
+    <div class="card">
+      <h3>Professional DJs</h3>
+      <p>Family-friendly, corporate, nightlife, and culturally driven events.</p>
+    </div>
+
+    <div class="card">
+      <h3>Venue & Holiday Programming</h3>
+      <p>Monthly, seasonal, and themed DJ activations for venues and brands.</p>
+    </div>
+
+    <div class="card">
+      <h3>Tournaments & Large Events</h3>
+      <p>Sports-adjacent events, community tournaments, and high-energy activations.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>About LAE</h2>
+  <p>
+    Love Action Entertainment (LAE) is an event and entertainment company delivering
+    professional DJ services and curated live experiences for venues, brands, and communities.
+  </p>
+</section>
+
+<section>
+  <h2>Why Love Action Entertainment</h2>
+  <ul>
+    <li>Professional, experienced DJs</li>
+    <li>Brand-safe and family-friendly options</li>
+    <li>Reliable setup and execution</li>
+    <li>Scalable across multiple locations</li>
+    <li>Culture-forward programming</li>
+  </ul>
+</section>
+
+<section id="contact">
+  <h2>Book or Contact LAE</h2>
+
+  <form action="mailto:loveactionentertainment@gmail.com" method="post" enctype="text/plain">
+    <input type="text" name="Name" placeholder="Name" required>
+    <input type="text" name="Company" placeholder="Company / Venue">
+    <input type="email" name="Email" placeholder="Email" required>
+    <input type="text" name="Event" placeholder="Event Type">
+    <input type="date" name="Date">
+    <textarea name="Message" placeholder="Tell us about your event"></textarea>
+    <button type="submit">Send Inquiry</button>
+  </form>
+</section>
+
+<footer>
+  © Love Action Entertainment
+</footer>
+
+</body>
+</html>
